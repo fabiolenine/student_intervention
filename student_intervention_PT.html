@@ -13258,18 +13258,17 @@ Conforme podemos observar, no gráfico acima, o algoritmo SVM possui melhor esta
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Resposta: </strong> O nosso objetivo é identificar como melhor classificar os dois grupos de alunos, os que aprovam e os que reprovam, utilizando para isso as caracteristicas dos alunos. O algoritimo SVM, que escolhemos, irá traça uma linha reta e realizará ajustes até encontrar o melhor lugar possível, que divida os dois grupos de alunos. Os ajustes realizados podem ser relacionado ao eixo X e Y, como também através de rotações dos eixos encontrando assim um novo plano para que a linha reta seja traçada e por conseqüência encontremos o melhor lugar possível de classificação.</p>
-<p>Uma vez determinada a melhor posição da linha reta (de tal forma que as distâncias do pronto mais proximo de cada um dos dois grupos sejam mais distantes), podemos submeter caracteristicas de alunos não classificados e obter a informação de que grupo ele está mais propenso (dependendo de onde os dados de teste caíram de cada lado da linha), alunos que aprovam ou reprovam.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="https://storage.googleapis.com/discoveryone/public/images/ml/Cap04.png" alt="SVM"></p>
+<p><strong>Resposta: </strong> O nosso objetivo é identificar como melhor classificar os dois grupos de alunos, os que aprovam e os que reprovam, utilizando para isso as características dos alunos.</p>
+<p>O algoritmo SVM (Support Vector Machine), que escolhemos, funcionará da seguinte forma:</p>
+<p>1 - Das linhas traçadas identificar a linha que melhor separou os grupos, no gráfico de exemplo abaixo, a melhor linha foi a B;
+<img src="https://www.analyticsvidhya.com/wp-content/uploads/2015/10/SVM_21.png" alt="Traçando linhas com SVM"></p>
+<p>2 - Nesse momento a linha será ajustada deixando um margem igual de ambos os lados, para identificar essas margens serão realizados cálculos de distância dos pontos dos grupos mais próximos as linhas de suporte (pontilhadas), conforme o gráfico de exemplo abaixo, posicionando a linha (constante) de forma centralizada entre as linhas de suporte (pontilhadas), de uma forma que a torne mais robusta na separação dos grupos;
+<img src="https://camo.githubusercontent.com/ae3d247a4c7cf5bc9f4134a1a90c0df69b39e988/68747470733a2f2f7777772e64747265672e636f6d2f75706c6f616465642f70616765696d672f53766d4d617267696e322e6a7067" alt="Ajustando as Margens do SVM"></p>
+<p>3 - Uma vez determinada a melhor posição da linha reta (de tal forma que as distâncias do pronto mais proximo de cada um dos dois grupos sejam mais distantes), podemos submeter características de alunos não classificados e obter a informação de que grupo ele está mais propenso (dependendo de onde os dados de teste caíram de cada lado da linha), alunos que aprovam ou reprovam.</p>
+<p>No item dois, comentei sobre as linhas (pontilhadas), esses são os vetores de suporte de um Support Vector Machine, e podemos perceber que eles são importantes para encontrar as melhores margens da linha classificatória entre os grupos.</p>
+<p>Para os dados que não são lineares, como por exemplo os gráficos abaixo, o SVM pode eficientemente realizar uma classificação não-linear, usando funções matemáticas (kernel) que elevam o espaço de entrada dimensional abaixo para espaço dimensional alto. 
+<img src="https://www.analyticsvidhya.com/wp-content/uploads/2015/10/SVM_8.png" alt="SVM não linear">
+<img src="https://www.analyticsvidhya.com/wp-content/uploads/2015/10/SVM_9.png" alt="SVM não linear transformado em linear"></p>
 
 </div>
 </div>
